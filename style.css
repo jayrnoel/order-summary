@@ -21,10 +21,9 @@ body {
   margin: 0;
   font-family: "Red Hat Display", sans-serif;
   font-size: 16px;
-  background-color: var(--v-pale-blue);
-  background-image: url("./images/pattern-background-desktop.svg");
+  background: url("./images/pattern-background-desktop.svg") hsl(225, 100%, 94%);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 50vmin;
 }
 
 .container {
