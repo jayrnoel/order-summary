@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-a: hsla(245, 75%, 52%, 15%);
+  --v-pale-blue: hsl(225, 100%, 98%);
+  --desat-blue: hsl(224, 23%, 55%);
+  --desat-blue-a: hsla(224, 23%, 55%, 5%);
+  --desat-blue-a20: hsla(224, 23%, 55%, 20%);
+  --d-blue: hsl(223, 47%, 23%);
+  --hover-states: hsl(245, 83%, 68%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background-color: var(--v-pale-blue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.card__header {
+  max-width: 100%;
+}
+
+.card {
+  max-width: 450px;
+  min-width: 320px;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 5px 30px var(--desat-blue-a);
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--d-blue);
+}
+.card__details {
+  color: var(--desat-blue);
+  width: 80%;
+  text-align: center;
+  line-height: 1.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.card button {
+  display: block;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+}
+.card__proceed {
+  background-color: var(--bright-blue);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 20px var(--bright-blue-a);
+  margin-top: 1.2rem;
+}
+.card__proceed:hover,
+.card__proceed:focus {
+  background-color: var(--hover-states);
+}
+.card__cancel {
+  background-color: transparent;
+  color: var(--desat-blue);
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+.card__cancel:hover,
+.card__cancel:focus {
+  color: var(--d-blue);
+}
+.card__body {
+  padding: 1.2rem 1.8rem;
+}
+
+.card__product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--v-pale-blue);
+  border-radius: 15px;
+  padding: 10px;
+}
+.product__icon {
+  margin-left: -1%;
+}
+.product__details {
+  margin-left: -5%;
+}
+.product__name {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  color: var(--d-blue);
+}
+.product__price {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  color: var(--desat-blue);
+}
+.product__change {
+  color: var(--bright-blue);
+}
+.product__change:hover,
+.product__change:focus {
+  color: var(--hover-states);
+  text-decoration: none;
+}
+
+@media (min-width: 445px) {
+  .product__icon {
+    margin-left: -5%;
+  }
+  .product__details {
+    margin-left: -18%;
+  }
+}
